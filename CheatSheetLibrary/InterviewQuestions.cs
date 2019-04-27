@@ -242,5 +242,36 @@ namespace CheatSheetLibrary
         }
         #endregion  
 
+        public static int SmallestPositiveNotInArray(int[] intArray)
+        {
+            // task is to return the smallest positive integer that is not in the given array, greater than 0.
+
+            // create bool array. +1 to account for 0th index.
+            var boolArray = new bool[intArray.Length + 1];
+
+            // assign bool array indexes to be if true the number is in the int array.
+            foreach (var number in intArray)
+            {
+                // no need to count any numbers higher than the lengh of the array.
+                if (number > 0 && number < boolArray.Length)
+                {
+                    boolArray[number] = true;
+                }
+
+            }
+
+            // for loop through the bool array finding the smallest int no included in the array. return result.
+            for (int i = 1; i < boolArray.Length; i++)
+            {
+                // if the boolArray potision is false then return the number
+                if (!boolArray[i])
+                {
+                    return i;
+                }
+            }
+            // otherwise return the lenght of the bool array.
+            return boolArray.Length;
+        }
+
     }
 }
