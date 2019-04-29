@@ -12,7 +12,7 @@ namespace CheatSheetLibrary
         #region 6 kyu
         // 6 KYU~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        public static string Order(string words)
+        public static string OrderNumberedStringsProperly(string words)
         {
             // Your task is to sort a given string. Each word in the string will contain a single number.This number is the position the word should have in the result.
             // Note: Numbers can be from 1 to 9.So 1 will be the first word(not 0).
@@ -27,7 +27,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static int find_it(int[] seq)
+        public static int FindIntThatAppearsOddNumberOfTimes(int[] seq)
         {
             // Given an array, find the int that appears an odd number of times.
             // There will always be only one integer that appears an odd number of times.
@@ -53,7 +53,7 @@ namespace CheatSheetLibrary
         // 7 KYU~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-        public static int[] minMax(int[] lst)
+        public static int[] MinAndMaxIntFromList(int[] lst)
         {
             // Write a function that returns both the minimum and maximum number of the given list/array.
             // MinMax.minMax(new int[]{1,2,3,4,5}) == {1,5}
@@ -62,7 +62,7 @@ namespace CheatSheetLibrary
             return new int[] { lst.Min(), lst.Max() };
         }
 
-        public static bool IsAnagram(string test, string original)
+        public static bool AnagramCheck(string test, string original)
         {
             // Note: anagrams are case insensitive
             // Complete the function to return true if the two arguments given are anagrams of theeach other; return false otherwise.
@@ -84,7 +84,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static int FindShort(string s)
+        public static int FindLengthOfShortestWord(string s)
         {
             //Simple, given a string of words, return the length of the shortest word(s).
             //String will never be empty and you do not need to account for different data types.
@@ -93,7 +93,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static string HighAndLow(string numbers)
+        public static string HighAndLowFromStringOfNumbers(string numbers)
         {
             // In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
             // Kata.HighAndLow("1 9 3 4 -5"); // return "9 -5"
@@ -106,7 +106,7 @@ namespace CheatSheetLibrary
             return $"{sList.Max()} {sList.Min()}";
         }
 
-        public static int GetVowelCount(string str)
+        public static int GetVowelCountInString(string str)
         {
             // Return the number (count) of vowels in the given string.
             // We will consider a, e, i, o, and u as vowels for this Kata.     
@@ -138,7 +138,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static string GetMiddle(string s)
+        public static string GetMiddleCharacterOfString(string s)
         {
             //You are going to be given a word. Your job is to return the middle character of the word.
             //If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
@@ -158,7 +158,7 @@ namespace CheatSheetLibrary
             //}                     
         }
 
-        public static String Accum(string s)
+        public static String DashPlusOneToString(string s)
         {
             //take a string and return as shown in example.!!
             //Accumul.Accum("abcd"); = // "A-Bb-Ccc-Dddd"
@@ -191,7 +191,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static int Solution(int value)
+        public static int SumOfMultiplesBelowValue(int value)
         {
             // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
             // Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
@@ -218,14 +218,14 @@ namespace CheatSheetLibrary
         #region 8 kyu
         //8 KYU~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        public static int MakeNegative(int number)
+        public static int MakeNumberNegative(int number)
         {
             //In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
             //return number > 0 ? number*-1:number;
             return -Math.Abs(number);
         }
 
-        public static string EvenOrOdd(int number)
+        public static string EvenOrOddCheck(int number)
         {
             //Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
             return (number % 2 == 0) ? "Even" : "Odd";
@@ -242,22 +242,18 @@ namespace CheatSheetLibrary
             */
         }
 
-        public static string Remove_Char(string s)
+        public static string RemoveFirstAndLastCharacterFromString(string s)
         {
             //It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string.
             //You're given one parameter, the original string.You don't have to worry with strings with less than two characters.
 
-
             var a = s.Substring(1, s.Length - 2);
 
-
-
             return a;
-
         }
 
 
-        public static bool DoesItEndWith(string str, string ending)
+        public static bool DoesItEndWithThisString(string str, string ending)
         {
             // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
             //solution('abc', 'bc') // returns true
@@ -278,7 +274,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static string NoSpace(string input)
+        public static string RemoveSpacesFromString(string input)
         {
             //remove all spaces from a string.
             return input.Replace(" ", string.Empty);
@@ -286,27 +282,27 @@ namespace CheatSheetLibrary
 
 
 
-        public static string boolToWord(bool word)
+        public static string BoolToWord(bool word)
         {
             //Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
             return word ? "Yes" : "No";
         }
 
-        public static int CountSheeps(bool[] sheeps)
+        public static int CountOfTrueInBoolArray(bool[] sheeps)
         {
             //Consider an array of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present/ false absent).
             //var a = sheeps.Where(c => c ).Count();
             return sheeps.Count(c => c);
         }
 
-        public static int FindSmallestInt(int[] args)
+        public static int FindSmallestIntInArray(int[] args)
         {
             //Given an array of integers your solution should find the smallest integer.
             return args.Min();
         }
 
 
-        public static string UpdateLight(string current)
+        public static string UpdateTrafficLightsSwitchStatement(string current)
         {
             //You're writing code to control your town's traffic lights.You need a function to handle each change from green, to yellow, to red, and then to green again.
             //Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
@@ -322,7 +318,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static string repeatStr(int n, string s)
+        public static string RepeatStringNTimes(int n, string s)
         {
             //Write a function called repeatStr which repeats the given
             //string string exactly n times.
@@ -339,7 +335,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static int Opposite(int number)
+        public static int ReturnNegativePositiveOpposite(int number)
         {
             //Very simple, given a number, find its opposite. eg: 1:-1, -14:14.
             //var a = number > 0 ? number - number - number : number*-1;
@@ -348,7 +344,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static int PositiveSum(int[] arr)
+        public static int SumOfPositiveNumbers(int[] arr)
         {
             //You get an array of numbers, return the sum of all of the positives ones.
             //example array should = 13; var x = new int[] { 1, -2, 3, 4, 5 };

@@ -8,7 +8,7 @@ namespace CheatSheetLibrary
 {
     public class InterviewQuestions
     {
-        public static void fizzBuzzBasic()
+        public static void FizzBuzzBasicIf()
         {
             for (int i = 1; i <= 100; i++)
             {
@@ -31,7 +31,7 @@ namespace CheatSheetLibrary
             }
         }
 
-        public static void fizzBuzzString()
+        public static void FizzBuzzStringConcat()
         {
             for (int i = 1; i <= 100; i++)
             {
@@ -53,7 +53,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static bool palindrome(string str)
+        public static bool PalindromeCheck(string str)
         {
             //check if the word is the same backwards.
             //check if last index is same as first index.
@@ -73,7 +73,7 @@ namespace CheatSheetLibrary
             return true;
         }
 
-        public static void revString(string str)
+        public static void ReverseStringV1(string str)
         {
             //chart array.
             var chArray = str.ToCharArray();
@@ -91,7 +91,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static void rString(string str)
+        public static void ReverseStringV2(string str)
         {
             var cArr = str.ToCharArray();
 
@@ -107,7 +107,7 @@ namespace CheatSheetLibrary
             Console.WriteLine(oneString);
         }
 
-        public static void sumOfPrime(int min, int max)
+        public static void FIXXXXXSumOfPrimesBetweenTwoNumbers(int min, int max)
         {
             //Given two numbers, find the sum of prime numbers between them, both inclusive.
             //Print the sum of prime numbers
@@ -149,7 +149,7 @@ namespace CheatSheetLibrary
             //var a = Math.Ceiling(Math.Sqrt(i));
         }
 
-        public static bool isPrime(int n)
+        public static bool BadPrimeCheck(int n)
         {
             //if it's divisible by any number other than itself it's not prime. otherwise return true;
             for (int i = 2; i < n; i++)
@@ -161,6 +161,20 @@ namespace CheatSheetLibrary
             }
             return true;
             //look on workbook
+        }
+
+        public static bool CheckIfPrimeGoodWaySqrt(int n)
+        {
+            if (n < 2)
+                return false;
+
+            int sqrt = (int)Math.Sqrt(n);
+            for (int i = 2; i <= sqrt; i++)
+            {
+                if (n % i == 0)
+                    return false;
+            }
+            return true;
         }
 
         #region RecursiveFactorial
