@@ -287,5 +287,147 @@ namespace CheatSheetLibrary
             return boolArray.Length;
         }
 
+
+        #region test
+
+        public static int SumOfAllNegativeNumbers(int[] intArray)
+        {
+            //Loop through the array, add all numbers less than 0. return output
+
+            int sumOfNegative = 0;
+
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                if (intArray[i] < 0)
+                {
+                    sumOfNegative += intArray[i];
+                }
+            }
+            return sumOfNegative;
+        }
+
+        public static int CountNumberOf1stoN(int N)
+        {
+            //check how many times the digit '1' appears upto the number N.
+            // assmuing we start at 0 and there are no negative numbers.
+            // possible math funtion.
+
+            int total = 0;
+
+            int j = 0;
+            // loop
+            for (int i = 1; i <= N; i++)
+            {
+                j = i;
+                while (j != 0)
+                {
+                    // use %10 to check if 1 exists.
+                    if (j % 10 == 1)
+                    {
+                        total++;
+                    }
+                    // divide by 10 to check next digit    
+                    j /= 10;
+
+                }
+            }
+            return total;
+        }
+
+        public static int InterestingTimesINCOMPLETE(string S, string T)
+        {
+            // leading 0's are always shown
+            // 13 : 31 : 33
+            // intersting time = can make a time with only two distict digits.
+            //00 : 00 : 00 and 11 : 11: 11 also count.
+            // the ':' is always there and does not count.
+
+            //task = count the interesting points in time in a period.
+
+            // assumtions: S and T follow format of "HH:MM:SS".
+            // S is a time before T on the same day.
+
+            // my task:
+            // I need to take in 2 string and check for all the "intersting" times between them.
+            // if there are more than 2 distint digits then ignore.
+            // don't take into account ':'.
+
+            // This is a very difficult problem for me, Most likely wont be able to complete,
+            // but I will add comments to what i would do and attempt to start.
+
+            //convert the string into DateTime
+            var firstTime = DateTime.Parse("01:02:01");
+            var secondTime = DateTime.Parse("11:02:01");
+
+            TimeSpan diff = secondTime.Subtract(firstTime);
+
+            int count = 0;
+            while (firstTime<secondTime)
+            {
+                // if statement to check for interesting times
+                // checking if the string without ':' contains less than two distinct digits.
+                if (true)
+                {
+                    count++;
+                }
+                // add an extra second at the end until secondTime is reached.
+                firstTime.AddSeconds(1);
+            }
+
+            return 1;
+        }
+
+        #endregion
+        public int interestingTimeSecondIMCOMPLETE(string S, string T)
+        {
+            // leading 0's are always shown
+            // 13 : 31 : 33
+            // intersting time = can make a time with only two distict digits.
+            //00 : 00 : 00 and 11 : 11: 11 also count.
+            // the ':' is always there and does not count.
+
+            //task = count the interesting points in time in a period.
+
+            // assumtions: S and T follow format of "HH:MM:SS".
+            // S is a time before T on the same day.
+
+            // my task:
+            // I need to take in 2 string and check for all the "intersting" times between them.
+            // if there are more than 2 distint digits then ignore.
+            // don't take into account ':'.
+
+            // This is a very difficult problem for me, Most likely wont be able to complete,
+            // but I will add comments to what i would do and attempt to start.
+
+
+            //testing# Ran out of time, wasn't able to find a working solution#
+            var firstTime = DateTime.Parse(S);
+            var secondTime = DateTime.Parse(T);
+
+            // the difference in time. not relevant for now.
+            TimeSpan timeDifference = firstTime.Subtract(secondTime);
+
+            // loop through every second in between the times.
+            // that doesn't contain more than two distinct digts?
+
+            // add one to a count variable to track interseting times.
+            int count = 0;
+            while (firstTime < secondTime)
+            {
+                // if statement to check for interesting times
+                // checking if the string without ':' contains less than two distinct digits.
+                if (true)
+                {
+                    count++;
+                }
+                // add an extra second at the end until secondTime is reached.
+                firstTime.AddSeconds(1);
+            }
+
+
+            //for compiler if incomplete.
+            return 1;
+
+        }
     }
 }

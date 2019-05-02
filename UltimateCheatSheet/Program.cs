@@ -12,11 +12,15 @@ namespace UltimateCheatSheet
     {
         static void Main(string[] args)
         {
-            
 
+            var my = DateTime.Parse("01:02:01");
+            var time2 = DateTime.Parse("11:02:01");
 
+            TimeSpan diff = time2.Subtract(my);
+            int[] arr = {3 };
 
-            Console.WriteLine();
+            var x =InterviewQuestions.SumOfAllNegativeNumbers(arr);
+            Console.WriteLine(x);
             
             Console.ReadLine();
         }
