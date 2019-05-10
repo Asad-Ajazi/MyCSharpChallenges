@@ -12,14 +12,8 @@ namespace UltimateCheatSheet
     {
         static void Main(string[] args)
         {
-
-            var my = DateTime.Parse("01:02:01");
-            var time2 = DateTime.Parse("11:02:01");
-
-            TimeSpan diff = time2.Subtract(my);
-            int[] arr = {3 };
-
-            var x =InterviewQuestions.SumOfAllNegativeNumbers(arr);
+            int[] nums = { 2, 7, 11, 15 };
+            var x = LeetCodeProblems.TwoSum(nums, 24);
             Console.WriteLine(x);
             
             Console.ReadLine();
