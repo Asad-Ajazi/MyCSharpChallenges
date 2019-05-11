@@ -10,11 +10,20 @@ namespace UltimateCheatSheet
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
-            int[] nums = { 2, 7, 11, 15 };
-            var x = LeetCodeProblems.TwoSum(nums, 24);
-            Console.WriteLine(x);
+            //int[] intArr = new int[] { 8, 7, 4, 5, 6, 3, 2, 1, 10, 88, 62, 45, 12, 36, 24, 78 };
+            int[] intArr = new int[] { 8, 7, 4, 5, 6, 3, 2 };
+            
+            Algorithms.MergeSort(intArr);
+
+            foreach (var item in intArr)
+            {
+                Console.WriteLine(item);
+            }
+
             
             Console.ReadLine();
         }
