@@ -104,77 +104,78 @@ namespace CheatSheetLibrary
         }
         #endregion
 
-        #region Merge Sort NOTWORKING
-        //CURRENTLY NOT WORKING AS EXPECTED.
-        // Divide array in half, sort halves and merge back together.
-        public static void MergeSort(int[] initialArray)
-        {
-            // create helper array(same size).
-            int[] helperArray = new int[initialArray.Length];
-            // call mergesort2(initial, helperA, start index, end index.)
-            MergeSort(initialArray, helperArray, 0, initialArray.Length - 1);
-        }
+        //#region Merge Sort NOTWORKING
+        ////CURRENTLY NOT WORKING AS EXPECTED.
+        //// Divide array in half, sort halves and merge back together.
+        //public static void MergeSort(int[] initialArray)
+        //{
+        //    // create helper array(same size).
+        //    int[] helperArray = new int[initialArray.Length];
+        //    // call mergesort2(initial, helperA, start index, end index.)
+        //    MergeSort(initialArray, helperArray, 0, initialArray.Length - 1);
+        //}
 
-        static void MergeSort(int[] initialArray, int[] helperArray, int low, int high)
-        {
-            if (low < high)
-            {
-                // get middle
-                int middle = low + (high - low) / 2;
-                // sort left half(inital, helperA, leftstart, leftend = middle.)
-                MergeSort(initialArray, helperArray, low, middle);
-                // sort right half(inital, helperA, rightstart = mid+1, rightend = high.)
-                MergeSort(initialArray, helperArray, middle + 1, high);
+        //static void MergeSort(int[] initialArray, int[] helperArray, int low, int high)
+        //{
+        //    if (low < high)
+        //    {
+        //        // get middle
+        //        int middle = low + (high - low) / 2;
+        //        // sort left half(inital, helperA, leftstart, leftend = middle.)
+        //        MergeSort(initialArray, helperArray, low, middle);
+        //        // sort right half(inital, helperA, rightstart = mid+1, rightend = high.)
+        //        MergeSort(initialArray, helperArray, middle + 1, high);
 
-                // merge the halves(initial, helperA, low, mid, high)
-                MergeHalves(initialArray, helperArray, low, middle, high);
+        //        // merge the halves(initial, helperA, low, mid, high)
+        //        MergeHalves(initialArray, helperArray, low, middle, high);
 
-            }
-        }
+        //    }
+        //}
 
-        static void MergeHalves(int[] initialArray, int[] helperArray, int low, int middle, int high)
-        {
-            // copy both halves into helper array.
-            for (int i = low; i <= high; i++)
-            {
-                helperArray[i] = initialArray[i];
-            }
+        //static void MergeHalves(int[] initialArray, int[] helperArray, int low, int middle, int high)
+        //{
+        //    // copy both halves into helper array.
+        //    for (int i = low; i <= high; i++)
+        //    {
+        //        helperArray[i] = initialArray[i];
+        //    }
 
-            // more variables
-            int helperLeft = low; //start left index
-            int helperRight = middle + 1; // start right index
-            int current = low; // current index.
+        //    // more variables
+        //    int helperLeft = low; //start left index
+        //    int helperRight = middle + 1; // start right index
+        //    int current = low; // current index.
 
-            // iterate helper array, compare left and right
-            // copy the smaller element from the two halves into the initial array.
-            while (helperLeft <= middle && helperRight <= high)
-            {
-                if (helperArray[helperLeft] <= helperArray[helperRight])
-                {
-                    initialArray[current] = helperArray[helperLeft];
-                    helperLeft++;
-                }
-                else
-                {
-                    // if right element is smaller than the left element.
-                    initialArray[current] = helperArray[helperRight];
-                    helperRight++;
-                }
-                //increment current index for inital array each time.
-                current++;
-            }
+        //    // iterate helper array, compare left and right
+        //    // copy the smaller element from the two halves into the initial array.
+        //    while (helperLeft <= middle && helperRight <= high)
+        //    {
+        //        if (helperArray[helperLeft] <= helperArray[helperRight])
+        //        {
+        //            initialArray[current] = helperArray[helperLeft];
+        //            helperLeft++;
+        //        }
+        //        else
+        //        {
+        //            // if right element is smaller than the left element.
+        //            initialArray[current] = helperArray[helperRight];
+        //            helperRight++;
+        //        }
+        //        //increment current index for inital array each time.
+        //        current++;
+        //    }
 
-            // copy the rest of the left side of the helper array into the initial array.
-            int remaining = middle - helperLeft;
-            for (int i = 0; i <= remaining; i++)
-            {
-                initialArray[current+1] = helperArray[helperLeft+1];
-            }
-        }
+        //    // copy the rest of the left side of the helper array into the initial array.
+        //    int remaining = middle - helperLeft;
+        //    for (int i = 0; i <= remaining; i++)
+        //    {
+        //        initialArray[current+1] = helperArray[helperLeft+1];
+        //    }
+        //}
 
 
 
-        #endregion
+        //#endregion
+
 
 
     }

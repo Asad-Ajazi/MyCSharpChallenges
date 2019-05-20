@@ -37,5 +37,43 @@ namespace CheatSheetLibrary
             }
             throw new Exception("No two sum solution");
         }
+
+        public static int[] TwoSumDictionary(int[] nums, int target)
+        {
+            Dictionary<int, int> numsDictionary = new Dictionary<int, int>();
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int num = nums[i];
+
+                // Uncomment this if nums are all positive
+                //if (num > target) { continue; }
+
+                if (numsDictionary.TryGetValue(target - num, out int index))
+                {
+                    Console.WriteLine($"{nums[index]},{nums[i]}");
+                    return new[] { index, i };
+                }
+
+                numsDictionary[num] = i;
+            }
+
+            return nums;
+        }
+
+        public static int ReverseNumber(int x)
+        {
+            // Reverse the number.
+            // -123 returns -321
+            // 12345 returns 54321
+
+            if (x <= int.MinValue || x >= int.MaxValue)
+            {
+                return 0;
+            }
+
+            //complete later
+            return 0;
+        }
     }
 }
