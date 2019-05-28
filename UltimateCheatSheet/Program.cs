@@ -17,13 +17,10 @@ namespace UltimateCheatSheet
             //int[] intArr = new int[] { 8, 7, 4, 5, 6, 3, 2, 1, 10, 88, 62, 45, 12, 36, 24, 78 };
             int[] intArr = new int[] { 8, 7, 4, 5, 6, 3, 2 };
 
-            //var x = LeetCodeProblems.TwoSum(intArr, 9);
-            LeetCodeProblems.TwoSumDictionary(intArr, 11);
-            //var a = LeetCodeProblems.ReverseNumber(-12345);
+            
 
-            //Console.WriteLine(Math.Abs(a));
-
-
+            int a = LeetCodeProblems.reverseInt(-91234);
+            Console.WriteLine(a);
 
             
             Console.ReadLine();
