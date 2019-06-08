@@ -150,5 +150,29 @@ namespace CheatSheetLibrary
             return rev;
         }
         #endregion
+
+        #region Multiply String
+
+        // work in progress, quick first attempt using any method. will optimise later and not use biginteger.
+        public string Multiply(string num1, string num2)
+        {
+            //Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
+            //Input: num1 = "2", num2 = "3"
+            //Output: "6"
+
+            //The length of both num1 and num2 is < 110.
+            //Both num1 and num2 contain only digits 0 - 9.
+            //Both num1 and num2 do not contain any leading zero, except the number 0 itself.
+            //You must not use any built-in BigInteger library or convert the inputs to integer directly**
+
+
+            var number1 = System.Numerics.BigInteger.Parse(num1);
+            var number2 = System.Numerics.BigInteger.Parse(num2);
+
+            var x = number1 * number2;
+            return x.ToString();
+        }
+
+        #endregion
     }
 }
