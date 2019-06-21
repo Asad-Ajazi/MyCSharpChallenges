@@ -16,11 +16,16 @@ namespace UltimateCheatSheet
         {
             //int[] intArr = new int[] { 8, 7, 4, 5, 6, 3, 2, 1, 10, 88, 62, 45, 12, 36, 24, 78 };
             int[] intArr = new int[] { 8, 7, 4, 5, 6, 3, 2 };
+            int[] sortedArr = new int[] { 1, 2, 4, 6, 8 };
+
+            var x = LeetCodeProblems.TwoSumSortedArray(sortedArr, 6);
+
+            foreach (var item in x)
+            {
+                Console.WriteLine("Index: "+item);
+            }
 
             
-
-            int a = LeetCodeProblems.reverseInt(-91234);
-            Console.WriteLine(a);
 
             
             Console.ReadLine();

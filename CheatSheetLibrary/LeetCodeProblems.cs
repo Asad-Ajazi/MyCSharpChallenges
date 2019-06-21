@@ -9,7 +9,7 @@ namespace CheatSheetLibrary
     public class LeetCodeProblems
     {
 
-        #region TwoSum
+        #region TwoSum 
         /// <summary>
         /// Takes in a array of numbers and finds two numbers in the array that add upto the target.
         /// </summary>
@@ -36,6 +36,31 @@ namespace CheatSheetLibrary
                 }
             }
             throw new Exception("No two sum solution");
+        }
+
+        public static int[] TwoSumSortedArray(int[] nums, int target)
+        {
+            int first = 0;
+            int last = nums.Length - 1;
+
+            // for sorted array, start at outer index and move closer to middle until true.
+            while (first<last)
+            {
+                if (nums[first] + nums[last] == target)
+                {
+                    return new int[] { nums[first], nums[last] };
+                }
+                else if (nums[first] + nums[last] < target)
+                {
+                    first++;
+                }
+                else
+                {
+                     last--;
+                }
+            }
+            throw new Exception("No two sum solution");
+
         }
 
         /// <summary>
@@ -172,6 +197,7 @@ namespace CheatSheetLibrary
             var x = number1 * number2;
             return x.ToString();
         }
+
 
         #endregion
     }
