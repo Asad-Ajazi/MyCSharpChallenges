@@ -200,5 +200,53 @@ namespace CheatSheetLibrary
 
 
         #endregion
+
+        #region jewels
+
+        public static int NumJewelsInStones(string J, string S)
+        {
+            //given string "j" and "s";
+            // J represents the types of stones that are jewels
+            // S represents the stones you have.
+
+            // each character in S is a type of stone you have.
+            // You want to know how many of the stones you have are also jewels.
+
+            //The letters in J are guaranteed distinct, and all characters 
+            // in J and S are letters.Letters are case sensitive,
+            // so "a" is considered a different type of stone from "A".
+
+            //** S & J have 50 letters max.
+            // Characters in J are distinct.
+
+            //eg input J = "aA", S = "aAAbbbb".
+            // output = 3
+
+            //eg2 Input: J = "z", S = "ZZ"
+            // output = 0
+
+            //LOOP METHOD
+            int count = 0;
+            for (int i = 0; i < J.Length; i++)
+            {
+                for (int j = 0; j < S.Length; j++)
+                {
+                    if (J[i] == S[j])
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        public static int NumJewelsInStonesLINQ(string J, string S)
+        {
+            return S.Count(c => J.Contains(c));
+        }
+
+        #endregion
+
+
     }
 }
