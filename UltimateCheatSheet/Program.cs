@@ -25,6 +25,9 @@ namespace UltimateCheatSheet
                 Console.WriteLine("Index: "+item);
             }
 
+            var jewels = LeetCodeProblems.NumJewelsInStonesLINQ(" ea", "the on ad ly");
+
+            Console.WriteLine(jewels);
             
 
             

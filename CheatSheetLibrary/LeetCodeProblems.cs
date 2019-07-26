@@ -203,17 +203,24 @@ namespace CheatSheetLibrary
 
         #region jewels
 
-        public static int NumJewelsInStones(string J, string S)
+        /// <summary>
+        /// Finds how many characters occur given two strings where one only contains distinct characters.
+        /// </summary>
+        /// <param name="Jewels">String containing distinct characters</param>
+        /// <param name="Stones">String that will be checked for values in j</param>
+        /// <returns></returns>
+        public static int NumJewelsInStones(string Jewels, string Stones)
         {
             //given string "j" and "s";
-            // J represents the types of stones that are jewels
-            // S represents the stones you have.
+            // J represents the types of stones that are jewels (JEWELS)
+            // S represents the stones you have. (ALL STONES YOU HAVE)
 
             // each character in S is a type of stone you have.
             // You want to know how many of the stones you have are also jewels.
 
-            //The letters in J are guaranteed distinct, and all characters 
-            // in J and S are letters.Letters are case sensitive,
+            // The letters in J are guaranteed DISTINCT, and all characters 
+            // in J and S are letters. 
+            // Letters are case sensitive,
             // so "a" is considered a different type of stone from "A".
 
             //** S & J have 50 letters max.
@@ -225,13 +232,15 @@ namespace CheatSheetLibrary
             //eg2 Input: J = "z", S = "ZZ"
             // output = 0
 
+            // spaces are also distinct
+
             //LOOP METHOD
             int count = 0;
-            for (int i = 0; i < J.Length; i++)
+            for (int i = 0; i < Jewels.Length; i++)
             {
-                for (int j = 0; j < S.Length; j++)
+                for (int j = 0; j < Stones.Length; j++)
                 {
-                    if (J[i] == S[j])
+                    if (Jewels[i] == Stones[j])
                     {
                         count++;
                     }
@@ -240,9 +249,10 @@ namespace CheatSheetLibrary
             return count;
         }
 
-        public static int NumJewelsInStonesLINQ(string J, string S)
+        public static int NumJewelsInStonesLINQ(string Jewels, string Stones)
         {
-            return S.Count(c => J.Contains(c));
+            // LINQ - Count of stones where Jewels contains a character in stones.
+            return Stones.Count(c => Jewels.Contains(c));
         }
 
         #endregion
