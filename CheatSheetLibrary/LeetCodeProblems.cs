@@ -257,6 +257,17 @@ namespace CheatSheetLibrary
 
         #endregion
 
+        #region Remove Vowels from string
+
+        public static string RemoveVowelsFromString(string str)
+        {
+            string vowels = "aeiou";
+            // new string, where str does not contain vowels, to array to return a string.
+            return new string(str.Where(x => !vowels.Contains(x)).ToArray());         
+        }
+
+        #endregion
+
 
     }
 }

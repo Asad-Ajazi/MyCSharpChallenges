@@ -18,16 +18,9 @@ namespace UltimateCheatSheet
             int[] intArr = new int[] { 8, 7, 4, 5, 6, 3, 2 };
             int[] sortedArr = new int[] { 1, 2, 4, 6, 8 };
 
-            var x = LeetCodeProblems.TwoSumSortedArray(sortedArr, 6);
+            var x = LeetCodeProblems.RemoveVowelsFromString("ahahahkloaeioujfjfshi");
 
-            foreach (var item in x)
-            {
-                Console.WriteLine("Index: "+item);
-            }
-
-            var jewels = LeetCodeProblems.NumJewelsInStonesLINQ(" ea", "the on ad ly");
-
-            Console.WriteLine(jewels);
+            Console.WriteLine(x);
             
 
             
