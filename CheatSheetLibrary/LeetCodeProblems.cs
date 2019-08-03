@@ -263,6 +263,7 @@ namespace CheatSheetLibrary
         {
             string vowels = "aeiou";
             // new string, where str does not contain vowels, to array to return a string.
+            //(Incoming string, where(each char(x) does not contain vowels(x)), to array.
             return new string(str.Where(x => !vowels.Contains(x)).ToArray());         
         }
 
