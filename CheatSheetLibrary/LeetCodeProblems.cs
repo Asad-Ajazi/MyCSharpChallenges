@@ -44,7 +44,7 @@ namespace CheatSheetLibrary
             int last = nums.Length - 1;
 
             // for sorted array, start at outer index and move closer to middle until true.
-            while (first<last)
+            while (first < last)
             {
                 if (nums[first] + nums[last] == target)
                 {
@@ -56,7 +56,7 @@ namespace CheatSheetLibrary
                 }
                 else
                 {
-                     last--;
+                    last--;
                 }
             }
             throw new Exception("No two sum solution");
@@ -264,11 +264,48 @@ namespace CheatSheetLibrary
             string vowels = "aeiou";
             // new string, where str does not contain vowels, to array to return a string.
             //(Incoming string, where(each char(x) does not contain vowels(x)), to array.
-            return new string(str.Where(x => !vowels.Contains(x)).ToArray());         
+            return new string(str.Where(x => !vowels.Contains(x)).ToArray());
         }
 
         #endregion
 
+        #region Defang IP Address
+
+        public static string DefangIP(string address)
+        {
+            //Given a valid (IPv4) IP address, return a defanged version of that IP address.
+            //A defanged IP address replaces every period "." with "[.]".
+
+            /*Example
+           Input: address = "255.100.50.0"
+           Output: "255[.]100[.]50[.]0"
+           */
+            var sb = new StringBuilder();
+
+            for (int i = 0; i < address.Length; i++)
+            {
+                if (address[i].Equals('.'))
+                {
+                    sb.Append("[");
+                    sb.Append(address[i]);
+                    sb.Append("]");
+                }
+                else
+                {
+                    sb.Append(address[i]);
+                }
+            }
+
+            return sb.ToString();
+        }
+
+        public static string DefangIP2(string address)
+        {
+            return new StringBuilder(address).Replace(".", "[.]").ToString();
+
+        }
+
+        #endregion
 
     }
 }
