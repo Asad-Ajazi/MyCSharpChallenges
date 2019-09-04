@@ -15,13 +15,9 @@ namespace UltimateCheatSheet
         static void Main(string[] args)
         {
             //int[] intArr = new int[] { 8, 7, 4, 5, 6, 3, 2, 1, 10, 88, 62, 45, 12, 36, 24, 78 };
-
-            var address = "225.100.50.0";
-
-            var test = LeetCodeProblems.DefangIP2(address);
-            Console.WriteLine(address);
             
-
+            var common = MyCustomProblems.MostCommonCharacter("This is a string");
+            Console.WriteLine(common+" is the most occuring character.");
             
             Console.ReadLine();
         }

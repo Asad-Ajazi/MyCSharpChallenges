@@ -201,6 +201,7 @@ namespace CheatSheetLibrary
             // 3+5+6+9 = 23
             //return 23
 
+            //Explanation: Make list of ints, less that max value and divisible by 3/5, add to list, return the sum of list.
             List<int> output = new List<int>();
             for (int i = 0; i < value; i++)
             {
@@ -295,10 +296,10 @@ namespace CheatSheetLibrary
             return sheeps.Count(c => c);
         }
 
-        public static int FindSmallestIntInArray(int[] args)
+        public static int FindSmallestIntInArray(int[] intArray)
         {
             //Given an array of integers your solution should find the smallest integer.
-            return args.Min();
+            return intArray.Min();
         }
 
 
@@ -318,7 +319,7 @@ namespace CheatSheetLibrary
 
         }
 
-        public static string RepeatStringNTimes(int n, string s)
+        public static string RepeatStringNTimes(int n, string str)
         {
             //Write a function called repeatStr which repeats the given
             //string string exactly n times.
@@ -331,7 +332,7 @@ namespace CheatSheetLibrary
             }
             return st;
             */
-            return string.Concat(Enumerable.Repeat(s, n));
+            return string.Concat(Enumerable.Repeat(str, n));
 
         }
 

@@ -47,6 +47,7 @@
     <Compile Include="GenerateRandomString.cs" />
     <Compile Include="InterviewQuestions.cs" />
     <Compile Include="LeetCodeProblems.cs" />
+    <Compile Include="MyCustomProblems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkingWithPrimes.cs" />
   </ItemGroup>
